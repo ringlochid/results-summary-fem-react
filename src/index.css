@@ -264,6 +264,15 @@ body {
   border: 0;
   border-radius: 8rem;
   background: var(--colors-navy-950, #303B59);
+  transition: ease-in-out 0.3s;
+}
+
+.continue-btn:hover {
+  background: var(--colors-blue-800, #1125D6);
+}
+
+.continue-btn:active {
+  background: var(--colors-gradient-2, linear-gradient(180deg, #75F 0%, #2F2CE9 100%));
 }
 
 .continue-btn span {
