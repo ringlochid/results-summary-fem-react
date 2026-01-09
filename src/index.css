@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--colors-blue-50, #F3F4FD);
+  overflow-x: hidden;
+}
+
+.result-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr)); 
+  width: min(46rem, 100svw);
+  padding: var(--spacing-0, 0);
+  place-items: center;
+  gap: var(--spacing-0, 0); 
+  border-radius: 2rem;
+  background: var(--colors-white, #FFF);
+  box-shadow: 0 30px 60px 0 rgba(61, 108, 236, 0.15);
+  @media (width < 768px) {
+    border-radius: 0;
+  }
+}
+
+.result-content-card {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-0, 0);
+  border-radius: 2rem;
+  background: var(--colors-gradient-2, linear-gradient(180deg, #75F 0%, #2F2CE9 100%));
+  @media (width < 768px) {
+    padding: 2rem var(--spacing-0, 0);
+    border-radius: 0 0 2rem 2rem;
+  }
+}
+
+.result-content {
+  display: flex;
+  width: 16.25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-400, 2rem);
+  flex-shrink: 0;
+  @media (768px <= width < 1440) {
+    width: 12.5rem;
+  }
+  @media (width < 768px) {
+    width: 16.25rem;
+  }
+}
+
+.result-content h1 {
+  margin: 0;
+  padding: 0;
+  align-self: stretch;
+  color: var(--colors-navy-200, #CAC9FF);
+  text-align: center;
+
+  /* Text Preset 4 - Hanken Grotesk Bold - 24px - 130% Line Height - 0px Line Spacing */
+  font-family: "Hanken Grotesk";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 1.95rem */
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  width: 12.5rem;
+  height: 12.5rem;
+  padding: var(--spacing-0, 0);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-0, 0);
+  border-radius: 50%;
+  background: var(--colors-gradient-1, linear-gradient(180deg, #4D21C9 0%, rgba(37, 33, 201, 0.00) 100%));
+  @media (width <= 768px) {
+    width: 8.75rem;
+    height: 8.75rem;
+  }
+}
+
+.score-container h1 {
+  margin: 0;
+  padding: 0;
+  align-self: stretch;
+  color: var(--colors-white, #FFF);
+  text-align: center;
+
+  /* Text Preset 1 - Hanken Grotesk ExtraBold - 72px - 100% Line Height - 0px Line Spacing */
+  font-family: "Hanken Grotesk";
+  font-size: 4.5rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%; /* 4.5rem */
+}
+
+.score-container span {
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: var(--colors-navy-200, #CAC9FF);
+  text-align: center;
+
+  /* Text Preset 5 (Bold) - Hanken Grotesk Bold - 18px - 130% Line Height - 0px Line Spacing */
+  font-family: "Hanken Grotesk";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 1.4625rem */
+  opacity: 0.5168;
+}
+
+.result-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-200, 1rem);
+  align-self: stretch;
+}
+
+.result-description h1 {
+  margin: 0;
+  padding: 0;
+  align-self: stretch;
+  color: var(--colors-white, #FFF);
+  text-align: center;
+
+  /* Text Preset 3 - Hanken Grotesk Bold - 32px - 130% Line Height - 0px Line Spacing */
+  font-family: "Hanken Grotesk";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 2.6rem */
+}
+
+.result-description p {
+  margin: 0;
+  padding: 0;
+  align-self: stretch;
+  color: var(--colors-navy-200, #CAC9FF);
+  text-align: center;
+
+  /* Text Preset 5 (Medium) - Hanken Grotesk Medium - 18px - 130% Line Height - 0px Line Spacing */
+  font-family: "Hanken Grotesk";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%; /* 1.4625rem */
+}
+
+.summary-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: clamp(1.5rem, 3svh,2.78rem) clamp(1.88rem, 8svw,2.5rem);
+  gap: var(--spacing-400, 2rem);
+  flex-shrink: 0;
+}
+
+.summary-container h1 {
+  margin: 0;
+  padding: 0;
+  align-self: stretch;
+  color: var(--colors-navy-950, #303B59);
+
+  /* Text Preset 4 - Hanken Grotesk Bold - 24px - 130% Line Height - 0px Line Spacing */
+  font-family: "Hanken Grotesk";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 1.95rem */
+}
+
+.summary-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: var(--spacing-200, 1rem);
+  flex-shrink: 0;
+}
+
+.summary-list-item {
+  display: flex;
+  height: 3.5rem;
+  padding: var(--spacing-0, 0) 1.15rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.75rem;
+  background: var(--colors-red-50, #FFF6F6);
+}
+
+.summary-list-items-category-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-200, 1rem);
+}
+
+.summary-list-items-category-container img {
+  width: 0.72919rem;
+  height: 0.9375rem;
+}
+
+.summary-list-items-category-container span {
+  display: block;
+
+  /* Text Preset 5 (Medium) - Hanken Grotesk Medium - 18px - 130% Line Height - 0px Line Spacing */
+  font-family: "Hanken Grotesk";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%; /* 1.4625rem */
+}
+
+.summary-list-item-score {
+  display: block;
+}
+
+.summary-list-item-score .score {
+  color: var(--colors-navy-950, #303B59);
+  text-align: right;
+
+  /* Text Preset 5 (Bold) - Hanken Grotesk Bold - 18px - 130% Line Height - 0px Line Spacing */
+  font-family: "Hanken Grotesk";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 1.4625rem */
+}
+
+.summary-list-item-score .total {
+  color: var(--colors-navy-950, #303B59);
+  text-align: right;
+
+  /* Text Preset 5 (Bold) - Hanken Grotesk Bold - 18px - 130% Line Height - 0px Line Spacing */
+  font-family: "Hanken Grotesk";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 1.4625rem */ 
+  opacity: 0.5;
+}
+
+.continue-btn {
+  display: grid;
+  place-items: center;
+  padding: 1.03rem var(--spacing-0, 0);
+  border: 0;
+  border-radius: 8rem;
+  background: var(--colors-navy-950, #303B59);
+}
+
+.continue-btn span {
+  display: block;
+  color: var(--colors-white, #FFF);
+  text-align: right;
+
+  /* Text Preset 5 (Bold) - Hanken Grotesk Bold - 18px - 130% Line Height - 0px Line Spacing */
+  font-family: "Hanken Grotesk";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 1.4625rem */
+}
